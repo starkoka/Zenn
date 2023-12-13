@@ -436,7 +436,7 @@ kokasuta.printName();
 ※この章はかなり難易度が高めです！！
 
 継承。カッコいい響きですね。  
-クラスの継承とは、既存のクラスをもとにその発展版のクラスを定義することです。例えば今回この記事ではHumanクラスを作りましたが、Humanクラスを継承して発展版であるperfectHumanクラスを作成できます。
+クラスの継承とは、既存のクラスをもとにその発展版のクラスを定義することです。例えば今回この記事ではHumanクラスを作りましたが、Humanクラスを継承して発展版であるPerfectHumanクラスを作成できます。
 継承される側の大本のクラスのことを「スーパークラス」、継承された側のクラスのことを「サブクラス」といいます。継承は
 ```java
 class サブクラス名 extends スーパークラス名{
@@ -444,21 +444,21 @@ class サブクラス名 extends スーパークラス名{
 }
 ```
 で行います。
-今回は、Humanクラスを継承し、perfectLevelをreturnする機能を加えたperfectHumanクラスを作ってみます。perfectLevelはPCの台数の10倍に比例するということにしましょう。  
+今回は、Humanクラスを継承し、perfectLevelをreturnする機能を加えたPerfectHumanクラスを作ってみます。perfectLevelはPCの台数の10倍に比例するということにしましょう。  
 
 ここで一つ注意点があります。クラスの継承において、コンストラクタは継承されません。その代わりに、コンストラクタの1行目に`super()`を使うことで、スーパークラスのコンストラクタを実行することが可能です。引数も同様に扱えます。  
-このことを踏まえると、Humanクラスを継承したperfectHumanクラスは以下のようになります。このようにすることで、Humanクラス同様インスタンス生成時に初期化が行えます。
+このことを踏まえると、Humanクラスを継承したPerfectHumanクラスは以下のようになります。このようにすることで、Humanクラス同様インスタンス生成時に初期化が行えます。
 ```java
-class perfectHuman extends Human{
-    public perfectHuman(String n,int num,int bank,int c){
+class PerfectHuman extends Human{
+    public PerfectHuman(String n,int num,int bank,int c){
         super(n,num,bank,c);
     }
 }
 ```
 次に、perfectLevelをreturnする機能を加えてみます。サブクラスからスーパークラスのフィールドやメソッドには、`super.名前`とすることでアクセスできます。そのため、
 ```java
-class perfectHuman extends Human{
-    public perfectHuman(String n,int num,int bank,int c){
+class PerfectHuman extends Human{
+    public PerfectHuman(String n,int num,int bank,int c){
         super(n,num,bank,c);
     }
     public int perfectLevel(){
@@ -466,7 +466,7 @@ class perfectHuman extends Human{
     }
 }
 
-perfectHuman kokastar = new perfectHuman("kokastar",3,334000,1700);
+PerfectHuman kokastar = new PerfectHuman("kokastar",3,334000,1700);
 println(kokastar.perfectLevel());
 ```
 で、perfectLevelを表示することができます。この場合は30になります。
