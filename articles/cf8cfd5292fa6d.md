@@ -60,12 +60,12 @@ published: false
 | 動作 | PCを購入する | 所持金が不足していて口座に十分お金があれば口座からお金を下ろし、代金分所持金を減らして、PCの台数を増やす |
 
 このように、どのような情報(変数)や動作(関数)を持つかを決めたものを、プログラミング言語では「クラス」といいます。また、このクラスの情報を今やったように決めることを、「クラスの宣言」といいます。
-このクラスのことを、humanクラスと呼ぶことにしましょう。
+このクラスのことを、Humanクラスと呼ぶことにしましょう。(ちなみに、クラスの名前は大文字から始めるのがプログラマの共通認識となっています)
 
-ただし、これだけでは何もできません。ここからは、このhumanクラスを使って人を実際に創り出してみましょう。
+ただし、これだけでは何もできません。ここからは、このHumanクラスを使って人を実際に創り出してみましょう。
 
-## humanクラスを使ってみる
-ここに、kokastarというhumanがいます。humanということは、先程決めた情報や動作を持っていることになります。kokastarの情報を少し覗いてみましょう。
+## Humanクラスを使ってみる
+ここに、kokastarというHumanがいます。Humanということは、先程決めた情報や動作を持っていることになります。kokastarの情報を少し覗いてみましょう。
 | 情報名 | 中身 |
 | ---- | ---- |
 | 名前 | kokastar |
@@ -146,15 +146,15 @@ kokastar.PCを購入する(100000)
 このように、クラスを使うことで「モノ」を扱いやすくできます。ゲーム制作においては様々なモノが出てくると思うので、それらをクラスを使って管理すると、扱いやすく読みやすいプログラムになると思います。
 
 # Java(processing)でクラスを使う
-ここからは、実際にhumanクラスとkokastarというhumanをJava(proseccing)で実装してみましょう。
+ここからは、実際にHumanクラスとkokastarというHumanをJava(proseccing)で実装してみましょう。
 
-## humanクラスの宣言 - 情報
+## Humanクラスの宣言 - 情報
 クラスにどのような情報を持てるようにするところから始めます。情報ということはつまり変数です。  
 
-humanクラスの宣言はこうします。この{}の中身クラスの情報を書いていきます。
-名前を変えたい場合は、humanの場所を別の名前にで置き換えましょう。
+Humanクラスの宣言はこうします。この{}の中身クラスの情報を書いていきます。
+名前を変えたい場合は、Humanの場所を別の名前にで置き換えましょう。
 ```java
-class human{
+class Human{
 
 }
 ```
@@ -163,7 +163,7 @@ class human{
 普通の変数とやってることは同じなので、難しくないと思います。C言語で構造体を知っている人であれば結構馴染みのある構文かもしれません。
 注意点として、型の前に`public`というのを書いています。これの意味は補足の章で説明します。
 ```java
-class human{
+class Human{
     public String name; //名前
     public int numOfpc; //PCの台数
     public int bankBalance; //銀行残高
@@ -172,12 +172,12 @@ class human{
 ```
 たったこれだけで、情報を持つための変数の作成ができました。
 
-## humanクラスの宣言 - 動作
+## Humanクラスの宣言 - 動作
 次は、動作の宣言をします。動作ということはつまり関数です。
 
 早速、名乗るための関数であるprintName関数を書いてみましょう。これも型の前に`public`を書いている小ｔに注意です。
 ```java
-class human{
+class Human{
     public String name; //名前
     public int numOfpc; //PCの台数
     public int bankBalance; //銀行残高
@@ -192,7 +192,7 @@ println関数を使ってnameを表示します。このように、メソッド
 
 また、引数も使えます(使い方ははこの後解説します)。口座からお金を下ろす関数は以下のように宣言できます。
 ```java
-class human{
+class Human{
     public String name; //名前
     public int numOfpc; //PCの台数
     public int bankBalance; //銀行残高
@@ -212,7 +212,7 @@ class human{
 
 最後に、PCを購入する関数も作成してみます。
 ```java
-class human{
+class Human{
     public String name; //名前
     public int numOfpc; //PCの台数
     public int bankBalance; //銀行残高
@@ -242,18 +242,18 @@ class human{
 ```
 まぁこんなところでしょう。この関数の内容はあまり重要ではないので、解説はコメントで書いておくに留めておきます。
 
-これでクラスの宣言ができたので、次はこのクラスをもとにkokastarというhumanを作り出してみましょう。
+これでクラスの宣言ができたので、次はこのクラスをもとにkokastarというHumanを作り出してみましょう。
 
-## kokastarというhumanを作り出す
-ここから先はhumanクラスの宣言を毎回書くと埋まってしまうため、省略します。コードの前にはhumanクラスの宣言があると思って読んでください。
+## kokastarというHumanを作り出す
+ここから先はHumanクラスの宣言を毎回書くと埋まってしまうため、省略します。コードの前にはHumanクラスの宣言があると思って読んでください。
 
 さて、kokastarの作り出し方ですが、至ってかんたんです。基本的な構文は以下のとおりです。
 ```java
 クラス名 作成するものの名前 = new クラス名();
 ```
-よって、humanクラスでkokastarを作りたい場合は以下のようにかけます。
+よって、Humanクラスでkokastarを作りたい場合は以下のようにかけます。
 ```java
-human kokastar = new human();
+Human kokastar = new Human();
 ```
 
 これでkokastarが作り出せました。かんたんです。
@@ -262,7 +262,7 @@ human kokastar = new human();
 kokastarに関数を実行させるには、kokastarの後ろに`.関数名(引数)`とすることで実行できます。  
 例えば、名乗らせたい場合は
 ```java
-human kokastar = new human();
+Human kokastar = new Human();
 kokastar.printName();
 ```
 とすれば...
@@ -271,7 +271,7 @@ kokastar.printName();
 おや、おかしいです。実行結果がnullになりました。でも考えればそれはそうです。nameなどの情報をまだ決定していませんでした。  
 変数にアクセスしたい場合は`kokastar.変数名`でできます。そのため、すべての変数を設定してあげましょう。
 ```java
-human kokastar = new human();
+Human kokastar = new Human();
 
 kokastar.name = "kokastar";
 kokastar.numOfpc = 3;
@@ -287,7 +287,7 @@ kokastar.printName();
 と問題なく名乗ってくれます。ただし、すべての変数において毎回代入するのは大変だと思います。それを解決する方法は後ほど紹介します。
 他にも、銀行から1000円下ろしたければ
 ```java
-human kokastar = new human();
+Human kokastar = new Human();
 
 kokastar.name = "kokastar";
 kokastar.numOfpc = 3;
@@ -309,10 +309,10 @@ println(kokastar.cash);
 先程はnameなどすべてを一つ一つ初期化していました。しかし、めんどくさいです。
 ここでは、最初から値を入れる方法を2つ紹介します。
 ### 1.毎回同じ値を最初に代入する
-今回はkokastar一人しか作成しませんでしたが、humanはいくつでも作成できます。そのときに、毎回同じ値にしたいのであれば、クラスの宣言時に設定しておく方法があります。  
-例えば、すべてのhumanはPCを1台持っているのであれば、以下のようにかけます。
+今回はkokastar一人しか作成しませんでしたが、Humanはいくつでも作成できます。そのときに、毎回同じ値にしたいのであれば、クラスの宣言時に設定しておく方法があります。  
+例えば、すべてのHumanはPCを1台持っているのであれば、以下のようにかけます。
 ```java
-class human{
+class Human{
     public String name;
     public int numOfpc=1;
     public int bankBalance;
@@ -325,26 +325,26 @@ class human{
 この方法は、例えばキャラクターの初期位置が(0,0)であると決まってる場合だとか、最初はHP満タンだからHP=100にしておくとか、そういう場合に使えます。
 
 ### 2.初期化時に設定したい
-kokastarにはkokastarという独自の名前についているように、すべてのhumanが同じ値で初期化するのでは不都合なものもあります。その場合は、宣言時に初期化することができます。具体的には、
+kokastarにはkokastarという独自の名前についているように、すべてのHumanが同じ値で初期化するのでは不都合なものもあります。その場合は、宣言時に初期化することができます。具体的には、
 ```java
-human kokastar = new human();
+Human kokastar = new Human();
 ```
-この段階で、`new human(ここに引数を入れる形で)`値を設定できます。そのためにはまず、humanクラスの中に以下の関数を加える必要があります。
+この段階で、`new Human(ここに引数を入れる形で)`値を設定できます。そのためにはまず、Humanクラスの中に以下の関数を加える必要があります。
 ```java
 クラス名(引数){
     引数を使った初期化処理
 }
 ```
 このとき、通常関数は返り値の型(なければvoid)を記述しますが、今回は返り値の方は書きません。
-今回の場合は、name,numOfPc,bankBalance,cashの4つを初期化したいので、その初期化も含めたhumanクラスの宣言は以下のようになります。
+今回の場合は、name,numOfPc,bankBalance,cashの4つを初期化したいので、その初期化も含めたHumanクラスの宣言は以下のようになります。
 ```java
-class human{
+class Human{
     public String name; //名前
     public int numOfpc; //PCの台数
     public int bankBalance; //銀行残高
     public int cash; //手持ちのお金
     
-    public human(String n,int num,int bank,int c){ 
+    public Human(String n,int num,int bank,int c){ 
         //変数名がかぶってしまうので、ここでは引数は頭文字だけとってます
         name = n;
         numOfpc = num;
@@ -376,8 +376,8 @@ class human{
 ```
 こうすることで、kokastarを作成するときに初期化できるようになります。あとは、関数同様に引数を指定すればいいので、
 ```java
-human kokastar = new human("kokastar",3,334000,1700);
-human kokasuta = new human("kokasuta",3,334000,1700);
+Human kokastar = new Human("kokastar",3,334000,1700);
+Human kokasuta = new Human("kokasuta",3,334000,1700);
 kokastar.printName();
 kokasuta.printName();
 ```
@@ -436,7 +436,7 @@ kokasuta.printName();
 ※この章はかなり難易度が高めです！！
 
 継承。カッコいい響きですね。  
-クラスの継承とは、既存のクラスをもとにその発展版のクラスを定義することです。例えば今回この記事ではhumanクラスを作りましたが、humanクラスを継承して発展版であるperfectHumanクラスを作成できます。
+クラスの継承とは、既存のクラスをもとにその発展版のクラスを定義することです。例えば今回この記事ではHumanクラスを作りましたが、Humanクラスを継承して発展版であるperfectHumanクラスを作成できます。
 継承される側の大本のクラスのことを「スーパークラス」、継承された側のクラスのことを「サブクラス」といいます。継承は
 ```java
 class サブクラス名 extends スーパークラス名{
@@ -444,12 +444,12 @@ class サブクラス名 extends スーパークラス名{
 }
 ```
 で行います。
-今回は、humanクラスを継承し、perfectLevelをreturnする機能を加えたperfectHumanクラスを作ってみます。perfectLevelはPCの台数の10倍に比例するということにしましょう。  
+今回は、Humanクラスを継承し、perfectLevelをreturnする機能を加えたperfectHumanクラスを作ってみます。perfectLevelはPCの台数の10倍に比例するということにしましょう。  
 
 ここで一つ注意点があります。クラスの継承において、コンストラクタは継承されません。その代わりに、コンストラクタの1行目に`super()`を使うことで、スーパークラスのコンストラクタを実行することが可能です。引数も同様に扱えます。  
-このことを踏まえると、humanクラスを継承したperfectHumanクラスは以下のようになります。このようにすることで、humanクラス同様インスタンス生成時に初期化が行えます。
+このことを踏まえると、Humanクラスを継承したperfectHumanクラスは以下のようになります。このようにすることで、Humanクラス同様インスタンス生成時に初期化が行えます。
 ```java
-class perfectHuman extends human{
+class perfectHuman extends Human{
     public perfectHuman(String n,int num,int bank,int c){
         super(n,num,bank,c);
     }
@@ -457,7 +457,7 @@ class perfectHuman extends human{
 ```
 次に、perfectLevelをreturnする機能を加えてみます。サブクラスからスーパークラスのフィールドやメソッドには、`super.名前`とすることでアクセスできます。そのため、
 ```java
-class perfectHuman extends human{
+class perfectHuman extends Human{
     public perfectHuman(String n,int num,int bank,int c){
         super(n,num,bank,c);
     }
