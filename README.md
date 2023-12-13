@@ -6,3 +6,8 @@
 ```
 npx zenn new:article
 ```
+
+記事のプレビューは
+```
+npx zenn preview
+```
