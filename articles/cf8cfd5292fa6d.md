@@ -3,7 +3,7 @@ title: "誰でも「それっぽく」使えるようになるクラス入門"
 emoji: "✨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [java,processing,クラス,class]
-published: false
+published: true
 ---
 
 [木更津高専アドベントカレンダー](https://qiita.com/advent-calendar/2023/nit_kisarazu)14日目担当のこかすた〜です(公開日は少しだけ早いですが...。)  
