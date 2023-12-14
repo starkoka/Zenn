@@ -6,7 +6,7 @@ topics: [java,processing,クラス,class]
 published: false
 ---
 
-昨日に引き続き、[木更津高専アドベントカレンダー](https://qiita.com/advent-calendar/2023/nit_kisarazu)15日目担当のこかすた〜です(公開日は少しだけ早いですが...。)  
+[木更津高専アドベントカレンダー](https://qiita.com/advent-calendar/2023/nit_kisarazu)14日目担当のこかすた〜です(公開日は少しだけ早いですが...。)  
 今回は、誰も簡単にそれっぽくクラスを使えるように、クラスの概念から説明していきます。
 
 # 前置き
