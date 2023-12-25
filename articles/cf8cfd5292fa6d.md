@@ -9,7 +9,7 @@ published: true
 << 前：[友達とBrainfuck命令セットCPUを作っている話](https://zenn.dev/chizuchizu/articles/10556e033d2942) by [chizuchizu](https://zenn.dev/chizuchizu)
 \>\> 後：[Arduino Uno R4 WiFiを使ってLAN内から文章を表示してみた](https://zenn.dev/kokastar/articles/5155d098d8d6a2) by [kokastar](https://zenn.dev/kokastar)
 
-[木更津高専アドベントカレンダー](https://qiita.com/advent-calendar/2023/nit_kisarazu)14日目担当のこかすた〜です(公開日は少しだけ早いですが...。)  
+[木更津高専 Advent Calendar 2023](https://qiita.com/advent-calendar/2023/nit_kisarazu)14日目担当のこかすた〜です(公開日は少しだけ早いですが...。)  
 今回は、誰も簡単にそれっぽくクラスを使えるように、クラスの概念から説明していきます。
 
 # 前置き
